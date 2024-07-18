@@ -1,0 +1,10 @@
+[package]
+name = "xtb"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+core = { path = "../core" }
+
+[build-dependencies]
+bindgen = "0.65.1"
