@@ -16,16 +16,16 @@ fn main() {
     // println!("cargo:rustc-link-search=native={}/lib", dst.display());
     // println!("cargo:rustc-link-lib=dylib=cint");
 
-    let out_path = std::env::current_dir().unwrap();
+    let recent_path = std::env::current_dir().unwrap();
 
     println!(
         "cargo:rustc-link-search=native={}/lib",
-        format!("{}/xtb-dist", out_path.display())
+        format!("{}/xtb-dist", recent_path.display())
     );
     println!("cargo:rustc-link-lib=static=xtb");
 
     let bindings = bindgen::Builder::default()
-        .header(format!("{}/xtb-dist/include/xtb.h", out_path.display()))
+        .header(format!("{}/xtb-dist/include/xtb.h", recent_path.display()))
         .blocklist_item("__.*")
         .blocklist_item(".*_")
         .wrap_unsafe_ops(true)

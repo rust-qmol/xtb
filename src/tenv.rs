@@ -1,5 +1,6 @@
-use core::mol::Molecule;
 use std::ffi::CString;
+
+use core::mol::Molecule;
 
 use crate::{
     libxtb::{

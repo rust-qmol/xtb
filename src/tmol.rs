@@ -2,11 +2,6 @@ use crate::libxtb::{xtb_TMolecule, xtb_delMolecule, xtb_updateMolecule};
 
 use super::tenv::TEnvironment;
 
-// pub struct Atom {
-//     pub numbers: u8,
-//     pub position: [f64; 3],
-// }
-
 pub struct TMolecule {
     pub(crate) mol_ptr: xtb_TMolecule,
     pub env: TEnvironment,
