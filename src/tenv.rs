@@ -1,6 +1,6 @@
 use std::ffi::CString;
 
-use core::mol::Molecule;
+use core::{atom::prop::AtomBasicProp, mol::{prop::MoleculeBasicProp, Molecule}};
 
 use crate::{
     libxtb::{
